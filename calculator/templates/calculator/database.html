@@ -1,0 +1,14 @@
+{% extends 'calculator/base_calculator.html' %}
+
+{% block content %}
+
+<h1>List of expressions, results and date publish</h1>
+
+{% for exp in exps %}
+<p>
+    {{exp}}
+</p>
+{% endfor %}
+
+{% endblock %}
+
