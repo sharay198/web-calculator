@@ -4,24 +4,6 @@ from calculator.forms import ExpForm
 
 # Create your views here.
 
-# код для формы без баз данных
-'''def get_exp(request):
-    # if this is a POST request we need to process the form data
-
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        form = ExpForm(request.POST)
-        # check whether it's valid:
-        if form.is_valid():
-            result = eval(form.cleaned_data['exp'])
-            form = ExpForm({'exp': result})
-            # process the data in form.cleaned_data as required
-            # redirect to a new URL:
-            return render(request, 'calculator/index.html', {'form': form})
-    if request.method == 'GET':
-        form = ExpForm()
-        return render(request, 'calculator/index.html', {'form': form})'''
-
 
 def get_exp(request):
     # if this is a POST request we need to process the form data
