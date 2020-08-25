@@ -18,11 +18,11 @@ def get_exp(request):
             d = {'exp': expression, 'result_of_exp': result}
             bound_form = ExpForm(d)
             bound_form.save()
-            return render(request, 'calculator/index.html', {'bound_form': bound_form})
+            return render(request, 'calculator/index.html', {'form': bound_form})
         else:
             d = {'exp': request.POST['exp'], 'result_of_exp': ''}
             bound_form = ExpForm(d)
-            return render(request, 'calculator/index.html', {'bound_form': bound_form})
+            return render(request, 'calculator/index.html', {'form': bound_form})
     if request.method == 'GET':
         form = ExpForm()
         return render(request, 'calculator/index.html', {'form': form})
