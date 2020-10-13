@@ -1,19 +1,12 @@
-from django.test import Client
-from django.http import request
-from calculator.forms import ExpForm
-# from django.test import TestCase
+from django.urls import reverse
+from django.test import RequestFactory
 from django.shortcuts import render
-from calculator.views import get_exp
 # Create your tests here.
-c = Client()
-file_index_html = open('index.html')
-content = file_index_html.read()
-key_in_template = content[182:187]
+from calculator.views import get_exp
 
 
-def test_key_of_context_in_get_exp():
-    # bound_form = ExpForm(request.POST)
-    # check whether it's valid:
-    context = {'form': None}
-    result = get_exp(request)
-    assert (result == render(request, 'calculator/index.html', {'form': None}))
+def test_get_exp():
+    path = reverse('index')
+    request = RequestFactory().post(path, data={'exp': '(11+1*5)/4'})
+
+    assert get_exp(request) == render(request, 'calculator/index.html', {'exp': '(11+1*5)/4', 'result_of_exp': '4'})
