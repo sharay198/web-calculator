@@ -1,0 +1,29 @@
+{% extends 'first_calculator/base_calculator.html' %}
+{% block title %}
+    Update expressiion
+{% endblock %}
+
+{% block content %}
+
+<h1> Calculator (Update existing expression)</h1>
+<form action=" {% url 'exp_update_url' id=exp.id %}" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+     <div>
+        {% if field.errors %}
+            <div class="alert alert-danger">
+                <p>{{ field.errors}}</p>
+            </div>
+        {% endif %}
+        <h3>{{ field.label }}</h3>
+        <p>{{ field }}</p>
+    </div>
+    {% endfor %}
+
+<table cellpadding="5"><tr><td><button type="submit" class="btn btn-primary">Calculate updating data</button></td>
+    <td><a href="{% url 'database' %}" class="btn btn-success">Calculation Details</a></td>
+</tr>
+</table>
+</form>
+
+{% endblock %}
