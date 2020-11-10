@@ -129,6 +129,21 @@ testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xm
 
 [[package]]
 category = "main"
+description = "A Django plugin for pytest."
+name = "pytest-django"
+optional = false
+python-versions = ">=3.5"
+version = "4.1.0"
+
+[package.dependencies]
+pytest = ">=5.4.0"
+
+[package.extras]
+docs = ["sphinx", "sphinx-rtd-theme"]
+testing = ["django", "django-configurations (>=2.0)"]
+
+[[package]]
+category = "main"
 description = "World timezone definitions, modern and historical"
 name = "pytz"
 optional = false
@@ -160,7 +175,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 version = "0.10.2"
 
 [metadata]
-content-hash = "62269e150b59fa32a0ff5effe46669eafa3a33b86d57759410c6e097860c7e56"
+content-hash = "aac8f0a5ff09a34329f27a8950dbbabf349f7f51579094d0363d3e4d7cf0bbd5"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -208,6 +223,10 @@ pyparsing = [
 pytest = [
     {file = "pytest-6.1.2-py3-none-any.whl", hash = "sha256:4288fed0d9153d9646bfcdf0c0428197dba1ecb27a33bb6e031d002fa88653fe"},
     {file = "pytest-6.1.2.tar.gz", hash = "sha256:c0a7e94a8cdbc5422a51ccdad8e6f1024795939cc89159a0ae7f0b316ad3823e"},
+]
+pytest-django = [
+    {file = "pytest-django-4.1.0.tar.gz", hash = "sha256:26f02c16d36fd4c8672390deebe3413678d89f30720c16efb8b2a6bf63b9041f"},
+    {file = "pytest_django-4.1.0-py3-none-any.whl", hash = "sha256:10e384e6b8912ded92db64c58be8139d9ae23fb8361e5fc139d8e4f8fc601bc2"},
 ]
 pytz = [
     {file = "pytz-2020.1-py2.py3-none-any.whl", hash = "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed"},
