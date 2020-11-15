@@ -6,13 +6,12 @@ from calculator.forms import ExpForm
 # Create your views here.
 
 
-def get_exp(request):
+def get_expression(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         bound_form = ExpForm(request.POST)
         # check whether it's valid:
-        print(request.method)
         if bound_form.is_valid():
 
             expression = bound_form.cleaned_data['exp']
@@ -30,13 +29,11 @@ def get_exp(request):
         return render(request, 'calculator/index.html', {'form': form})
 
 
-def exp_detail(request, id):
-    #print(id)
+def detail_of_expression(request, id):
     exp = Exp.expressions.get(id=id)
-
     return render(request, 'calculator/exp_detail.html', context={'exp': exp})
 
 
-def exp_list(request):
+def list_of_expressions(request):
     exps = Exp.expressions.all()
     return render(request, 'calculator/database.html', context={'exps': exps})

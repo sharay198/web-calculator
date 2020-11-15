@@ -15,10 +15,10 @@ Including another URLconf
 """
 # from django.contrib import admin
 from django.urls import path
-from calculator.views import get_exp, exp_list, exp_detail
+from calculator.views import get_expression, list_of_expressions, detail_of_expression
 
 urlpatterns = [
-    path('', get_exp, name='index'),
-    path('database', exp_list, name='database'),
-    path('database/<int:id>', exp_detail, name='details')
+    path('', get_expression, name='index'),
+    path('database', list_of_expressions, name='database'),
+    path('database/<int:id>/', detail_of_expression, name='details')
 ]

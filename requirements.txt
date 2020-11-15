@@ -1,4 +1,0 @@
-Django==2.2.4
-pytz==2020.1 s
-sqlparse==0.3.1
-
