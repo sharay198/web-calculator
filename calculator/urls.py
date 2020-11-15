@@ -15,9 +15,10 @@ Including another URLconf
 """
 # from django.contrib import admin
 from django.urls import path
-from calculator.views import get_exp, exp_list
+from calculator.views import get_exp, exp_list, exp_detail
 
 urlpatterns = [
     path('', get_exp, name='index'),
-    path('database', exp_list, name ='database')
+    path('database', exp_list, name='database'),
+    path('database/<int:id>', exp_detail, name='details')
 ]

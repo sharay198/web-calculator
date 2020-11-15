@@ -30,6 +30,13 @@ def get_exp(request):
         return render(request, 'calculator/index.html', {'form': form})
 
 
+def exp_detail(request, id):
+    #print(id)
+    exp = Exp.expressions.get(id=id)
+
+    return render(request, 'calculator/exp_detail.html', context={'exp': exp})
+
+
 def exp_list(request):
     exps = Exp.expressions.all()
     return render(request, 'calculator/database.html', context={'exps': exps})
