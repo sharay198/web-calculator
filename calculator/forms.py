@@ -4,16 +4,24 @@ from calculator.models import Exp
 
 
 class ExpForm(forms.ModelForm):
-    expression = forms.CharField(label='Expression', widget=forms.TextInput(attrs={'placeholder': 'Enter expression'}))
-    result_of_expression = forms.CharField(label='Result of expression', required=False,
+    expression = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Enter expression'}))
+    result_of_expression = forms.CharField(required=False,
                                            widget=forms.TextInput(attrs={'readonly': 'readonly'}))
 
     class Meta:
         model = Exp
         fields = ['expression', 'result_of_expression']
 
+    # def clean_expression(self):
+    #     expression = self.cleaned_data['expression']
+    #     for item in expression:
+    #         if not isinstance(item, int) or item != '.':
+    #             raise ValidationError('You have entered invalid data')
+    #     return expression
+
     def clean_result_of_expression(self):
         expression = self.cleaned_data['expression']
+
         try:
             result_of_expression = eval(expression)
         except ZeroDivisionError:

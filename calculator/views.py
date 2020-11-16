@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
+
 from calculator.models import Exp
 from calculator.forms import ExpForm
 
@@ -41,5 +43,10 @@ def list_of_expressions(request):
 
 
 def delete_expression(request, id):
-    expression = Exp.expressions.get(id=id)
-    del expression
+    if request.method == 'GET':
+        expression = Exp.expressions.get(id=id)
+        return render(request, 'calculator/delete expression.html', {'expression': expression})
+    if request.method == 'POST':
+        expression = Exp.expressions.get(id=id)
+        expression.delete()
+        return redirect(reverse('database'))
