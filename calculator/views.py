@@ -13,15 +13,16 @@ def get_expression(request):
         bound_form = ExpForm(request.POST)
         # check whether it's valid:
         if bound_form.is_valid():
-
-            expression = bound_form.cleaned_data['exp']
-            result = bound_form.cleaned_data['result_of_exp']
-            d = {'exp': expression, 'result_of_exp': result}
+            print(request.POST)
+            expression = bound_form.cleaned_data['expression']
+            result = bound_form.cleaned_data['result_of_expression']
+            d = {'expression': expression, 'result_of_expression': result}
             bound_form = ExpForm(d)
             bound_form.save()
             return render(request, 'calculator/index.html', {'form': bound_form})
         else:
-            d = {'exp': request.POST['exp'], 'result_of_exp': ''}
+            print('wrong')
+            d = {'expression': request.POST['expression'], 'result_of_expression': ''}
             bound_form = ExpForm(d)
             return render(request, 'calculator/index.html', {'form': bound_form})
     if request.method == 'GET':
@@ -30,10 +31,15 @@ def get_expression(request):
 
 
 def detail_of_expression(request, id):
-    exp = Exp.expressions.get(id=id)
-    return render(request, 'calculator/exp_detail.html', context={'exp': exp})
+    expression = Exp.expressions.get(id=id)
+    return render(request, 'calculator/expression_detail.html', context={'expression': expression})
 
 
 def list_of_expressions(request):
-    exps = Exp.expressions.all()
-    return render(request, 'calculator/database.html', context={'exps': exps})
+    expressions = Exp.expressions.all()
+    return render(request, 'calculator/database.html', context={'expressions': expressions})
+
+
+def delete_expression(request, id):
+    expression = Exp.expressions.get(id=id)
+    del expression

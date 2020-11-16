@@ -4,9 +4,9 @@
 
 <h1>List of expressions, results and date publish</h1>
 
-{% for exp in exps %}
+{% for expression in expressions %}
 <p>
-    {{exp.exp}} <a href="{% url 'details' id=exp.id %}">Read details</a>
+    {{expression.expression}} <a href="{% url 'details' id=expression.id %}">Read details</a><a href = ""> Delete</a>
 </p>
 
 {% endfor %}
