@@ -19,15 +19,17 @@ def get_expression(request):
             expression = bound_form.cleaned_data['expression']
             result = bound_form.cleaned_data['result_of_expression']
             d = {'expression': expression, 'result_of_expression': result}
+            # if bound_form.has_changed():
             bound_form = ExpForm(d)
             bound_form.save()
             return render(request, 'calculator/index.html', {'form': bound_form})
         else:
-            print('wrong')
             d = {'expression': request.POST['expression'], 'result_of_expression': ''}
             bound_form = ExpForm(d)
+            # print(bound_form.fields)
             return render(request, 'calculator/index.html', {'form': bound_form})
     if request.method == 'GET':
+        print(request.method)
         form = ExpForm()
         return render(request, 'calculator/index.html', {'form': form})
 
