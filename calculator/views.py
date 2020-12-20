@@ -22,21 +22,22 @@ def get_expression(request):
             # if bound_form.has_changed():
             bound_form = ExpForm(d)
             bound_form.save()
-            return render(request, 'calculator/index.html', {'form': bound_form})
+            return render(request, 'calculator/index.html', context = {'form': bound_form})
         else:
+            # if bound_form.has_error()
             d = {'expression': request.POST['expression'], 'result_of_expression': ''}
             bound_form = ExpForm(d)
-            # print(bound_form.fields)
-            return render(request, 'calculator/index.html', {'form': bound_form})
+            print(bound_form.errors)
+            return render(request, 'calculator/index.html', context = {'form': bound_form})
     if request.method == 'GET':
         print(request.method)
         form = ExpForm()
-        return render(request, 'calculator/index.html', {'form': form})
+        return render(request, 'calculator/index.html', context = {'form': form})
 
 
 def detail_of_expression(request, id):
     expression = Exp.expressions.get(id=id)
-    return render(request, 'calculator/expression_detail.html', context={'expression': expression})
+    return render(request, 'calculator/expression detail.html', context={'expression': expression})
 
 
 def list_of_expressions(request):
@@ -47,7 +48,7 @@ def list_of_expressions(request):
 def delete_expression(request, id):
     if request.method == 'GET':
         expression = Exp.expressions.get(id=id)
-        return render(request, 'calculator/delete expression.html', {'expression': expression})
+        return render(request, 'calculator/delete expression.html', context = {'expression': expression})
     if request.method == 'POST':
         expression = Exp.expressions.get(id=id)
         expression.delete()

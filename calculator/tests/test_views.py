@@ -22,13 +22,13 @@ class TestUrls:
 
 class TestViews:
     client = Client()
-    paths = {'index': reverse('index'), 'database': reverse('database')}
+    paths = {'index': reverse('index'), 'database': reverse('database'), 'delete expression': 'delete expression'}
     key_of_context_of_index_page = 'form'
     key_of_context_of_database_page = 'expressions'
     key_of_context_of_exp_detail_page = 'expression'
+    key_of_context_of_delete_page = 'delete'
 
     def test_equlity_key_of_context_of_index_page_with_template(self):
-
         index_page = open(BASE_DIR + '/calculator/templates/calculator/index.html', 'r')
         assert self.key_of_context_of_index_page in index_page.read()
 
@@ -37,7 +37,7 @@ class TestViews:
         assert self.key_of_context_of_database_page in database_page.read()
 
     def test_equlity_key_of_context_of_exp_detail_page_with_template(self):
-        exp_detail_page = open(BASE_DIR + '/calculator/templates/calculator/expression_detail.html', 'r')
+        exp_detail_page = open(BASE_DIR + '/calculator/templates/calculator/expression detail.html', 'r')
         assert self.key_of_context_of_exp_detail_page in exp_detail_page.read()
 
     def test_key_of_context_of_index_page(self):
@@ -49,6 +49,11 @@ class TestViews:
         path = self.paths['database']
         response = self.client.get(path)
         assert self.key_of_context_of_database_page in response.context
+
+    def test_key_of_context_of_delete_page(self):
+        path = self.paths['delete expression']
+        response = self.client.get(path)
+        assert self.key_of_context_of_delete_page in response.context
 
     @pytest.mark.django_db
     def test_key_of_context_of_database_page(self):

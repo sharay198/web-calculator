@@ -3,6 +3,9 @@
 
 {% block content %}
 <h1> Calculator</h1>
+<p align="center"> Use integer or float numbers and actions such as "**" - for
+exponentiation", "*" - for multiplication, "/" - for division "+" - for sum, "-" - for
+difference</p>
 
 <form action=" {% url 'index' %}" method="post">
     {% csrf_token %}
