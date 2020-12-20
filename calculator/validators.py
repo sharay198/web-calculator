@@ -3,47 +3,75 @@ from django.core.exceptions import ValidationError
 list_of_available_chars = '*/+-.0123456789)('
 
 
+# remove to clean_result_of_exp of forms.py
 def validate_result_of_exp(value):
     if value == ZeroDivisionError:
         raise ValidationError('You can not division by zero')
     return value
 
 
+def check_string_s_action_floordiv(expression):
+    if '//' in expression:
+        return True
+    return False
+
+
+def check_expression(expression):
+    try:
+        eval(expression, {'__builtins__': {}})
+    except ZeroDivisionError:
+        raise ValidationError('You can not division on zero')
+    except NameError:
+        raise ValidationError('You have entered invalid data 1')
+    except SyntaxError:
+        raise ValidationError('You have entered invalid data 2')
+    except KeyError:
+        raise ValidationError('You have entered invalid data 3')
+    except IndexError:
+        raise ValidationError('You have entered invalid data 4')
+    except TypeError:
+        raise ValidationError('You have entered invalid data 5')
+    else:
+        if check_string_s_action_floordiv(expression) or not check_wrong_char_in_string(expression):
+            raise ValidationError('Wrong data')
+    #         raise ValidationError('Wrong data')
+    return expression
+
+
 def check(char):
+    """if char in '*/+-.0123456789)(' return True otherwise False"""
     if char in list_of_available_chars:
         return True
     return False
 
 
-def check_string(string):
-    if string is None:
+def check_none_string(expression):
+    if expression is None:
         raise ValidationError('You have entered wrong data 1')
-    for char in string:
+    return expression
+
+
+def check_empty_string(expression):
+    if expression.isspace():
+        return expression
+
+
+def check_wrong_char_in_string(expression):
+    for char in expression:
         if not check(char):
-            raise ValidationError('You have entered wrong data in validator')
-    return string
+            return False
+    return True
 
 
-def check_empty_string(string):
-    if string.isspace():
-        return string
-
-
-def check_string_s_action(string):
-    length = len(string)
-    if check_string(string):
-        for i in range(length):
-            if string[i] == '*' and string[i + 1] == '*':
-                pass
-            if string[i] == '/' and string[i + 1] == '/':
-                # if string[i] == '/' and string[i + 1] != '(' or string[i + 1] not in '0123456789':
+def check_string_s_action_exponentiation(expression):
+    length = len(expression)
+    for i in range(length):
+        if expression[i] == '*':
+            pass
+            if expression[i + 1] != '*':
                 raise ValidationError('Wrong action 1')
-        return string
+    return expression
 
-# s = 'a-(2-1)'
+# s = '1//'
 # print(eval(s, {}))
-# print(check_string('1-(2-1)'))
-
-
-# def calculate_exp(value):
-#     if value
+# print(check_wrong_char_in_string('1-1'))
