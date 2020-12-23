@@ -2,6 +2,7 @@ import pytest
 from django.test import Client
 from django.urls import reverse, resolve
 from settings import BASE_DIR
+from calculator.views import *
 
 
 # Create your tests here.
@@ -19,14 +20,24 @@ class TestUrls:
         print(resolve(path).view_name)
         assert resolve(path).view_name == 'database'
 
+    def test_path_of_detail_page(self):
+        path = reverse('details', kwargs={'id': 5})
+        print(resolve(path).view_name)
+        assert resolve(path).view_name == 'details'
+
+    def test_path_of_delete_page(self):
+        path = reverse('delete', kwargs={'id': 5})
+        print(resolve(path).view_name)
+        assert resolve(path).view_name == 'delete'
+
 
 class TestViews:
     client = Client()
-    paths = {'index': reverse('index'), 'database': reverse('database'), 'delete expression': 'delete expression'}
+    paths = {'index': reverse('index'), 'database': reverse('database'), 'delete ': reverse('delete', kwargs={'id': 5})}
     key_of_context_of_index_page = 'form'
     key_of_context_of_database_page = 'expressions'
     key_of_context_of_exp_detail_page = 'expression'
-    key_of_context_of_delete_page = 'delete'
+    key_of_context_of_delete_page = 'expression'
 
     def test_equlity_key_of_context_of_index_page_with_template(self):
         index_page = open(BASE_DIR + '/calculator/templates/calculator/index.html', 'r')
@@ -40,6 +51,10 @@ class TestViews:
         exp_detail_page = open(BASE_DIR + '/calculator/templates/calculator/expression detail.html', 'r')
         assert self.key_of_context_of_exp_detail_page in exp_detail_page.read()
 
+    def test_equlity_key_of_context_of_exp_delete_page_with_template(self):
+        exp_delete_page = open(BASE_DIR + '/calculator/templates/calculator/delete expression.html', 'r')
+        assert self.key_of_context_of_delete_page in exp_delete_page.read()
+
     def test_key_of_context_of_index_page(self):
         path = self.paths['index']
         response = self.client.get(path)
@@ -51,9 +66,10 @@ class TestViews:
         assert self.key_of_context_of_database_page in response.context
 
     def test_key_of_context_of_delete_page(self):
-        path = self.paths['delete expression']
+        path = self.paths['delete']
         response = self.client.get(path)
-        assert self.key_of_context_of_delete_page in response.context
+        print(response.context)
+        assert 'expression' in response.context
 
     @pytest.mark.django_db
     def test_key_of_context_of_database_page(self):
@@ -71,3 +87,8 @@ class TestViews:
         path = self.paths['database']
         response = self.client.get(path)
         assert 'calculator/database.html' in [template.name for template in response.templates]
+
+    def test_post_get_expression(self):
+        path = self.paths['index']
+        response = self.client.post(path, data={'expression': '15/3', 'result_of_expression': ''})
+        assert response.context['result_of_expression'] == 5

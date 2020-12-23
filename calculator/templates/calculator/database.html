@@ -6,8 +6,10 @@
 
 {% for expression in expressions %}
 <p>
-    {{expression.expression}} <a href="{% url 'details' id=expression.id %}">Read details</a>
+    {{expression.expression}}
+    <a href="{% url 'details' id=expression.id %}">Read details</a>
     <a href = "{% url 'delete' id=expression.id %}"> Delete</a>
+    <a href = "{% url 'index' %}"> Back to calculator</a>
 </p>
 
 {% endfor %}

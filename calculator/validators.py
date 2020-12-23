@@ -5,9 +5,9 @@ list_of_available_chars = '*/+-.0123456789)('
 
 # remove to clean_result_of_exp of forms.py
 def validate_result_of_exp(value):
-    if value == ZeroDivisionError:
-        raise ValidationError('You can not division by zero')
-    return value
+    if isinstance(value, float) and value % 1 == 0:
+        return True
+    return False
 
 
 def check_string_s_action_floordiv(expression):
@@ -33,8 +33,9 @@ def check_expression(expression):
         raise ValidationError('You have entered invalid data 5')
     else:
         if check_string_s_action_floordiv(expression) or not check_wrong_char_in_string(expression):
-            raise ValidationError('Wrong data')
-    #         raise ValidationError('Wrong data')
+            raise ValidationError('You have entered invalid data 6')
+        # if validate_result_of_exp(eval(expression, {'__builtins__': {}})):
+        #     return int(eval(expression))
     return expression
 
 
@@ -43,17 +44,6 @@ def check(char):
     if char in list_of_available_chars:
         return True
     return False
-
-
-def check_none_string(expression):
-    if expression is None:
-        raise ValidationError('You have entered wrong data 1')
-    return expression
-
-
-def check_empty_string(expression):
-    if expression.isspace():
-        return expression
 
 
 def check_wrong_char_in_string(expression):

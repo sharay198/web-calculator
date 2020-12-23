@@ -8,8 +8,10 @@ from .validators import *
 class Exp(models.Model):
     expression = models.CharField('expression', max_length=150, db_index=True,
                                   validators=[
-                                              check_expression
-
+                                              check_expression,
+                                              check_string_s_action_floordiv,
+                                              validate_result_of_exp
+                                              # validate_result_of_exp
 
                                               ])
     result_of_expression = models.CharField('result of expression', max_length=150, db_index=True, blank=True)
