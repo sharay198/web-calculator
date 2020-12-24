@@ -79,3 +79,7 @@ def delete_expression(request, id):
         expression = Exp.expressions.get(id=id)
         expression.delete()
         return redirect(reverse('database'))
+
+
+
+
