@@ -3,6 +3,7 @@ from django.test import Client
 from django.urls import reverse, resolve
 from settings import BASE_DIR
 from calculator.views import *
+from calculator.validators import *
 
 
 # Create your tests here.
@@ -40,6 +41,10 @@ class TestViews:
     key_of_context_of_database_page = 'expressions'
     key_of_context_of_exp_detail_page = 'expression'
     key_of_context_of_delete_page = 'expression'
+
+    def test_calculate_expression(self):
+        pytest.raises(ValidationError, calculate_expression, '1/0')
+        # pytest.raises(NameError, calculate_expression, '1/a')
 
     def test_equlity_key_of_context_of_index_page_with_template(self):
         index_page = open(BASE_DIR + '/calculator/templates/calculator/index.html', 'r')
@@ -93,4 +98,18 @@ class TestViews:
     # def test_post_get_expression(self):
     #     path = self.paths['index']
     #     response = self.client.post(path, data={'expression': '15/3', 'result_of_expression': ''})
-    #     assert response.context['result_of_expression'] == 5
+    #     assert response.context['result_of_expression'] ==
+
+
+class TestModels:
+
+    def test_check_expression(self):
+        pytest.raises(ValidationError, check_expression, '1/0')
+        pytest.raises(ValidationError, check_expression, '1/a')
+        pytest.raises(ValidationError, check_expression, '1//')
+        pytest.raises(ValidationError, check_expression, '1/')
+        pytest.raises(ValidationError, check_expression, '[]')
+        pytest.raises(ValidationError, check_expression, '[')
+        pytest.raises(ValidationError, check_expression, 'print(""Hello")')
+        pytest.raises(ValidationError, check_expression, '')
+        pytest.raises(ValidationError, check_expression, '1**')
