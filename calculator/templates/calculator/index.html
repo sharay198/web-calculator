@@ -9,6 +9,11 @@ difference</p>
 
 <form action=" {% url 'index' %}" method="post">
     {% csrf_token %}
+    {% if form.non_filed_errors %}
+        <div class = 'alert alert-danger'>
+                <p>{{ form.non_filed_errors }}</p>
+            </div>
+    {% endif %}
     {% for field in form %}
      <div>
         {% if field.errors %}

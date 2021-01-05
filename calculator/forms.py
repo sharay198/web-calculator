@@ -15,6 +15,13 @@ class ExpForm(forms.ModelForm):
         model = Exp
         fields = ['expression', 'result_of_expression']
 
+    # def clean_result_of_expression(self):
+    #     expression = self.cleaned_data['expression']
+    #     try:
+    #         result_of_expression = eval(expression)
+    #     except Exception:
+    #         raise ValidationError('Wrong data')
+    #     return result_of_expression
     # def clean_expression(self):
     #     expression = self.cleaned_data['expression']
     #     try:
@@ -40,11 +47,10 @@ class ExpForm(forms.ModelForm):
     #     return result
 
     # def clean(self):
-    #     cleaned_data = super().clean()
-    #     expression = self.cleaned_data.get('expression')
-    #     result_of_expression = self.cleaned_data.get('result of expression')
-    #
-    #     if not expression:
-    #         raise ValidationError('Empty')
-    #     else:
-    #         return self.cleaned_data
+    # cleaned_data = super().clean()
+    # expression = self.cleaned_data.get('expression')
+    # result_of_expression = self.cleaned_data.get('result of expression')
+    # if expression and result_of_expression = '':
+    #     result_of_expression = eval(expression)
+    # if not expression:
+    #     raise ValidationError('Empty')

@@ -10,9 +10,9 @@ def check_remainder_of_value(value):
 
 
 # Create your views here.
-def calculate_expression(expression):
-    """Calculate expression"""
-    return eval(expression)
+# def calculate_expression(expression):
+#     """Calculate expression"""
+#     return eval(expression)
 
 
 def make_dict_with_data_for_valid_form(expression):
@@ -37,8 +37,9 @@ def get_expression(request):
             bound_form = ExpForm(d)
             bound_form.save()
             return render(request, 'calculator/index.html', context={'form': bound_form})
-        elif bound_form.has_error('expression'):
+        elif bound_form.errors:
             d = make_dict_with_data_for_form_with_error(request.POST['expression'])
+            print(d)
             bound_form = ExpForm(d)
             return render(request, 'calculator/index.html', context={'form': bound_form})
     if request.method == 'GET':

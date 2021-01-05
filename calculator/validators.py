@@ -10,7 +10,7 @@ def validate_result_of_exp(value):
     return False
 
 
-def check_string_s_action_floordiv(expression):
+def check_if_floordiv(expression):
     if '//' in expression:
         return True
     return False
@@ -32,23 +32,24 @@ def check_expression(expression):
     except TypeError:
         raise ValidationError('You have entered invalid data 5')
     else:
-        if check_string_s_action_floordiv(expression) or not check_wrong_char_in_string(expression):
+        if check_if_floordiv(expression) or not check_char_in_string(expression):
             raise ValidationError('You have entered invalid data 6')
         # if validate_result_of_exp(eval(expression, {'__builtins__': {}})):
         #     return int(eval(expression))
     return expression
 
 
-def check(char):
+def check_char(char):
     """if char in '*/+-.0123456789)(' return True otherwise False"""
     if char in list_of_available_chars:
         return True
     return False
 
 
-def check_wrong_char_in_string(expression):
+def check_char_in_string(expression):
     for char in expression:
-        if not check(char):
+        if not check_char(char):
+
             return False
     return True
 
