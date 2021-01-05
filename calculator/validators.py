@@ -34,8 +34,6 @@ def check_expression(expression):
     else:
         if check_if_floordiv(expression) or not check_char_in_string(expression):
             raise ValidationError('You have entered invalid data 6')
-        # if validate_result_of_exp(eval(expression, {'__builtins__': {}})):
-        #     return int(eval(expression))
     return expression
 
 
@@ -53,16 +51,3 @@ def check_char_in_string(expression):
             return False
     return True
 
-
-def check_string_s_action_exponentiation(expression):
-    length = len(expression)
-    for i in range(length):
-        if expression[i] == '*':
-            pass
-            if expression[i + 1] != '*':
-                raise ValidationError('Wrong action 1')
-    return expression
-
-# s = '1//'
-# print(eval(s, {}))
-# print(check_wrong_char_in_string('1-1'))
