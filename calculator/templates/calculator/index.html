@@ -3,24 +3,17 @@
 
 {% block content %}
 <h1> Calculator</h1>
-<p align="center"> Use integer or float numbers and actions such as "**" - for
-exponentiation", "*" - for multiplication, "/" - for division "+" - for sum, "-" - for
-difference</p>
+
 
 <form action=" {% url 'index' %}" method="post">
     {% csrf_token %}
-    {% if form.non_filed_errors %}
+    {% if form.non_field_errors %}
         <div class = 'alert alert-danger'>
-                <p>{{ form.non_filed_errors }}</p>
-            </div>
+            <p>{{ form.non_field_errors }}</p>
+        </div>
     {% endif %}
     {% for field in form %}
      <div>
-        {% if field.errors %}
-            <div class = 'alert alert-danger'>
-                <p>{{ field.errors }}</p>
-            </div>
-        {% endif %}
         <p>{{ field.label }}</p>
         <p>{{ field }}</p>
     </div>

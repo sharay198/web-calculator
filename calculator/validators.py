@@ -16,17 +16,17 @@ def check_if_floordiv(expression):
     return False
 
 
-def check_expression(expression):
-    try:
-        eval(expression, {'__builtins__': {}})
-    except ZeroDivisionError:
-        raise ValidationError('You can not division on zero')
-    except (NameError, SyntaxError, KeyError, IndexError, TypeError):
-        raise ValidationError('You have entered invalid data')
-    else:
-        if check_if_floordiv(expression) or not check_char_in_string(expression):
-            raise ValidationError('You have entered invalid data 6')
-    return expression
+# def check_expression(expression):
+#     try:
+#         eval(expression, {'__builtins__': {}})
+#     except ZeroDivisionError:
+#         raise ValidationError('You can not division on zero')
+#     except (NameError, SyntaxError, KeyError, IndexError, TypeError):
+#         raise ValidationError('You have entered invalid data')
+#     else:
+#         if check_if_floordiv(expression) or not check_char_in_string(expression):
+#             raise ValidationError('You have entered invalid data 6')
+#     return expression
 
 
 def check_char(char):
@@ -39,7 +39,6 @@ def check_char(char):
 def check_char_in_string(expression):
     for char in expression:
         if not check_char(char):
-
             return False
     return True
 

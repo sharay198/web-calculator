@@ -15,11 +15,11 @@ def check_remainder_of_value(value):
 #     return eval(expression)
 
 
-def make_dict_with_data_for_valid_form(expression):
-    result_of_expression = eval(expression)
-    if check_remainder_of_value(result_of_expression):
-        result_of_expression = int(result_of_expression)
-    return {'expression': expression, 'result_of_expression': result_of_expression}
+# def make_dict_with_data_for_valid_form(expression):
+#     result_of_expression = eval(expression)
+#     if check_remainder_of_value(result_of_expression):
+#         result_of_expression = int(result_of_expression)
+#     return {'expression': expression, 'result_of_expression': result_of_expression}
 
 
 def make_dict_with_data_for_form_with_error(expression):
@@ -33,13 +33,15 @@ def get_expression(request):
         bound_form = ExpForm(request.POST)
         # check whether it's valid:
         if bound_form.is_valid():
-            d = make_dict_with_data_for_valid_form(bound_form.cleaned_data['expression'])
+            expression = bound_form.cleaned_data['expression']
+            result_of_expression = bound_form.cleaned_data['result_of_expression']
+            d = {'expression': expression, 'result_of_expression': result_of_expression}
             bound_form = ExpForm(d)
             bound_form.save()
             return render(request, 'calculator/index.html', context={'form': bound_form})
         elif bound_form.errors:
-            d = make_dict_with_data_for_form_with_error(request.POST['expression'])
-            print(d)
+            d = {'expression': request.POST['expression'], 'result_of_expression': ''}
+            print(d['expression'])
             bound_form = ExpForm(d)
             return render(request, 'calculator/index.html', context={'form': bound_form})
     if request.method == 'GET':
