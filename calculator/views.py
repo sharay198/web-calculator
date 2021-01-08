@@ -4,18 +4,6 @@ from calculator.models import Exp
 from calculator.forms import ExpForm
 
 
-def check_remainder_of_value(value):
-    """Return True if value is float and it's remainder equal zero value otherwise False"""
-    return True if isinstance(value, float) and value % 1 == 0 else False
-
-
-# Create your views here.
-
-
-def make_dict_with_data_for_form_with_error(expression):
-    return {'expression': expression, 'result_of_expression': ''}
-
-
 def get_expression(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':

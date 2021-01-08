@@ -18,7 +18,6 @@ class ExpForm(forms.ModelForm):
     def clean(self):
         cleaned_data = super(ExpForm, self).clean()
         expression = cleaned_data.get('expression')
-        # result_of_expression = cleaned_data['result_of_expression']
         try:
             cleaned_data['result_of_expression'] = calculate_expression(expression)
         except ZeroDivisionError:
