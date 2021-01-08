@@ -42,9 +42,9 @@ class TestViews:
     key_of_context_of_exp_detail_page = 'expression'
     key_of_context_of_delete_page = 'expression'
 
-    def test_calculate_expression(self):
-        pytest.raises(ValidationError, calculate_expression, '1/0')
-        # pytest.raises(NameError, calculate_expression, '1/a')
+    # def test_calculate_expression(self):
+    #     pytest.raises(ValidationError, calculate_expression, '1/0')
+    #     # pytest.raises(NameError, calculate_expression, '1/a')
 
     def test_equlity_key_of_context_of_index_page_with_template(self):
         index_page = open(BASE_DIR + '/calculator/templates/calculator/index.html', 'r')
@@ -101,15 +101,15 @@ class TestViews:
     #     assert response.context['result_of_expression'] ==
 
 
-class TestModels:
-
-    def test_check_expression(self):
-        pytest.raises(ValidationError, check_expression, '1/0')
-        pytest.raises(ValidationError, check_expression, '1/a')
-        pytest.raises(ValidationError, check_expression, '1//')
-        pytest.raises(ValidationError, check_expression, '1/')
-        pytest.raises(ValidationError, check_expression, '[]')
-        pytest.raises(ValidationError, check_expression, '[')
-        pytest.raises(ValidationError, check_expression, 'print(""Hello")')
-        pytest.raises(ValidationError, check_expression, '')
-        pytest.raises(ValidationError, check_expression, '1**')
+# class TestModels:
+#
+#     def test_check_expression(self):
+#         pytest.raises(ValidationError, check_expression, '1/0')
+#         pytest.raises(ValidationError, check_expression, '1/a')
+#         pytest.raises(ValidationError, check_expression, '1//')
+#         pytest.raises(ValidationError, check_expression, '1/')
+#         pytest.raises(ValidationError, check_expression, '[]')
+#         pytest.raises(ValidationError, check_expression, '[')
+#         pytest.raises(ValidationError, check_expression, 'print(""Hello")')
+#         pytest.raises(ValidationError, check_expression, '')
+#         pytest.raises(ValidationError, check_expression, '1**')
