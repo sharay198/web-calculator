@@ -10,16 +10,6 @@ def check_remainder_of_value(value):
 
 
 # Create your views here.
-# def calculate_expression(expression):
-#     """Calculate expression"""
-#     return eval(expression)
-
-
-# def make_dict_with_data_for_valid_form(expression):
-#     result_of_expression = eval(expression)
-#     if check_remainder_of_value(result_of_expression):
-#         result_of_expression = int(result_of_expression)
-#     return {'expression': expression, 'result_of_expression': result_of_expression}
 
 
 def make_dict_with_data_for_form_with_error(expression):
@@ -41,7 +31,6 @@ def get_expression(request):
             return render(request, 'calculator/index.html', context={'form': bound_form})
         elif bound_form.errors:
             d = {'expression': request.POST['expression'], 'result_of_expression': ''}
-            print(d['expression'])
             bound_form = ExpForm(d)
             return render(request, 'calculator/index.html', context={'form': bound_form})
     if request.method == 'GET':
