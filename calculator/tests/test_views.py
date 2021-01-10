@@ -1,9 +1,10 @@
 import pytest
+from django.core.exceptions import ValidationError
 from django.test import Client
 from django.urls import reverse, resolve
 from settings import BASE_DIR
 from calculator.views import *
-from calculator.validators import *
+from ..forms import ExpForm
 
 
 # Create your tests here.
@@ -101,15 +102,30 @@ class TestViews:
     #     assert response.context['result_of_expression'] ==
 
 
-# class TestModels:
-#
-#     def test_check_expression(self):
-#         pytest.raises(ValidationError, check_expression, '1/0')
-#         pytest.raises(ValidationError, check_expression, '1/a')
-#         pytest.raises(ValidationError, check_expression, '1//')
-#         pytest.raises(ValidationError, check_expression, '1/')
-#         pytest.raises(ValidationError, check_expression, '[]')
-#         pytest.raises(ValidationError, check_expression, '[')
-#         pytest.raises(ValidationError, check_expression, 'print(""Hello")')
-#         pytest.raises(ValidationError, check_expression, '')
-#         pytest.raises(ValidationError, check_expression, '1**')
+# class TestForms:
+
+
+data = {'expression': '10/1'}
+data_1 = {'expression': '10/0'}
+data_2 = {'expression': '(10/(1+1))+5**5-0'}
+f = ExpForm(data)
+f_1 = ExpForm(data_1)
+f_2 = ExpForm(data_2)
+
+
+def test_ExpForm():
+    assert f.is_valid() == True
+    assert f_1.is_valid() == False
+    assert f_2.clean() == {'expression':'(10/1+1)+5**5-0', 'result_of_expression': '30'}
+    # pytest.raises(ValidationError, f_1.clean())
+    with pytest.raises(ValidationError):
+        f_1.clean()
+    # pytest.raises(ValidationError, f.clean(), '')
+    # pytest.raises(ValidationError, , '1/a')
+    # pytest.raises(ValidationError, , '1//')
+    # pytest.raises(ValidationError, , '1/')
+    # pytest.raises(ValidationError, , '[]')
+    # pytest.raises(ValidationError, , '[')
+    # pytest.raises(ValidationError, , 'print(""Hello")')
+    # pytest.raises(ValidationError, , '')
+    # pytest.raises(ValidationError, , '1**')
