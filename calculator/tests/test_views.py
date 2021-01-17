@@ -1,10 +1,7 @@
 import pytest
-from django.core.exceptions import ValidationError
 from django.test import Client
-from django.urls import reverse, resolve
 from settings import BASE_DIR
 from calculator.views import *
-from ..forms import ExpForm
 
 
 # Create your tests here.
