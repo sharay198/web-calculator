@@ -47,22 +47,17 @@ class TestViews:
         print(response.context)
         assert self.key_of_context_of_database_page in response.context
 
-    # @pytest.mark.django_db
-    # def test_key_of_context_of_delete_page(self):
-    #     path = self.paths['delete']
-    #     response = self.client.get(path)
-    #     print(path)
-    #     print(response.context)
-    #     assert self.key_of_context_of_delete_page in response.context
-    #
-    # @pytest.mark.django_db
-    # def test_key_of_context_of_details_page(self):
-    #     path = '/calculator/database/15/'
-    #     #path = self.paths['details']
-    #     print(path)
-    #     response = self.client.get(path)
-    #     print(response.context)
-    #     assert self.key_of_context_of_detail_page in response.context
+    @pytest.mark.django_db
+    def test_key_of_context_of_delete_page(self):
+        path = self.paths['delete']
+        response = self.client.get(path)
+        assert self.key_of_context_of_delete_page in response.context
+
+    @pytest.mark.django_db
+    def test_key_of_context_of_details_page(self):
+        path = self.paths['details']
+        response = self.client.get(path)
+        assert self.key_of_context_of_detail_page in response.context
 
     def test_template_using_of_index_page(self):
         path = self.paths['index']
