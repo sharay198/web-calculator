@@ -15,11 +15,11 @@ Including another URLconf
 """
 # from django.contrib import admin
 from django.urls import path
-from calculator.views import get_expression, list_of_expressions, detail_of_expression, delete_expression
+from calculator.views import get_expression, list_of_expressions, details_of_expression, delete_expression
 
 urlpatterns = [
     path('', get_expression, name='index'),
     path('database', list_of_expressions, name='database'),
-    path('database/<int:id>/', detail_of_expression, name='details'),
+    path('database/<int:id>/', details_of_expression, name='details'),
     path('database/<int:id>/delete/', delete_expression, name='delete')
 ]

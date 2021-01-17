@@ -15,6 +15,7 @@ def get_expression(request):
             expression = bound_form.cleaned_data['expression']
             result_of_expression = bound_form.cleaned_data['result_of_expression']
             d = {'expression': expression, 'result_of_expression': result_of_expression}
+            print(d)
             bound_form = ExpForm(d)
             bound_form.save()
             return render(request, 'calculator/index.html', context={'form': bound_form})
@@ -27,9 +28,9 @@ def get_expression(request):
         return render(request, 'calculator/index.html', context={'form': form})
 
 
-def detail_of_expression(request, id):
+def details_of_expression(request, id):
     expression = Exp.expressions.get(id=id)
-    return render(request, 'calculator/expression detail.html', context={'expression': expression})
+    return render(request, 'calculator/expression details.html', context={'expression': expression})
 
 
 def list_of_expressions(request):
