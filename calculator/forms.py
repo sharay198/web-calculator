@@ -27,4 +27,6 @@ class ExpForm(forms.ModelForm):
         else:
             if check_if_floordiv(expression):
                 raise ValidationError('You have entered invalid data')
+            if check_if_only_brackets_is_in_expression(expression):
+                raise ValidationError('You have entered invalid data')
         return cleaned_data
