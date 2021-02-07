@@ -25,8 +25,6 @@ class ExpForm(forms.ModelForm):
         except (NameError, SyntaxError, KeyError, IndexError, TypeError):
             raise ValidationError('You have entered invalid data 1')
         else:
-            if check_if_floordiv(expression):
+            if check_if_floordiv(expression) or check_empty_only_brackets_is_in_expression(expression):
                 raise ValidationError('You have entered invalid data')
-            if check_empty_only_brackets_is_in_expression(expression):
-                raise ValidationError('You have entered invalid data 3')
         return cleaned_data

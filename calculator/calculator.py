@@ -1,4 +1,4 @@
-BRACKETS = '()', '[]', '{}'
+BRACKETS_AND_OTHERS_WRONG_CHARS = '()', '[]', '{}', '>', '<', '='
 
 
 def check_remainder_of_result(value):
@@ -16,8 +16,8 @@ def check_if_floordiv(expression):
 
 
 def check_empty_only_brackets_is_in_expression(expression):
-    """Return True if expression has "()", "[]", "{}", or False otherwise"""
-    for brackets in BRACKETS:
+    """Return True if expression has "()", "[]", "{}", ">", "<", "=" or False otherwise"""
+    for brackets in BRACKETS_AND_OTHERS_WRONG_CHARS:
         if brackets not in expression:
             continue
         else:
