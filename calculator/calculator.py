@@ -15,12 +15,13 @@ def check_if_floordiv(expression):
     return False
 
 
-def check_if_only_brackets_is_in_expression(expression):
+def check_empty_only_brackets_is_in_expression(expression):
     """Return True if expression has "()", "[]", "{}", or False otherwise"""
     for brackets in BRACKETS:
         if brackets not in expression:
-            return True
-    return False
+            continue
+        else:
+            return expression
 
 
 def calculate_expression(expression):
