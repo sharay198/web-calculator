@@ -23,7 +23,7 @@ class ExpForm(forms.ModelForm):
         except ZeroDivisionError:
             raise ValidationError('You can not division on zero')
         except (NameError, SyntaxError, KeyError, IndexError, TypeError):
-            raise ValidationError('You have entered invalid data 1')
+            raise ValidationError('You have entered invalid data')
         else:
             if check_if_floordiv(expression) or check_empty_only_brackets_is_in_expression(expression):
                 raise ValidationError('You have entered invalid data')
