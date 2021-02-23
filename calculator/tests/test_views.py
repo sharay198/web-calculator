@@ -25,11 +25,11 @@ class TestViews:
         assert self.key_of_context_of_database_page in database_page.read()
 
     def test_equlity_key_of_context_of_exp_detail_page_with_template(self):
-        exp_detail_page = open(BASE_DIR + '/calculator/templates/calculator/expression details.html', 'r')
+        exp_detail_page = open(BASE_DIR + '/calculator/templates/calculator/expression_details.html', 'r')
         assert self.key_of_context_of_detail_page in exp_detail_page.read()
 
     def test_equlity_key_of_context_of_exp_delete_page_with_template(self):
-        exp_delete_page = open(BASE_DIR + '/calculator/templates/calculator/delete expression.html', 'r')
+        exp_delete_page = open(BASE_DIR + '/calculator/templates/calculator/delete_expression.html', 'r')
         assert self.key_of_context_of_delete_page in exp_delete_page.read()
 
     def test_key_of_context_of_index_page(self):
