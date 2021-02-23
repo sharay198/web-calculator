@@ -25,16 +25,18 @@ to get the latest version for development.
 
     pyenv install 3.8.5
 
-Set a python version 3.8.5 in your directory with project (web_calculator/)::
+#. Set a python version 3.8.5 in your directory with project (web_calculator/)::
 
     pyenv local 3.8.5
 
+
 After doing that a python-version file will appears in the directory with project.
-#. Install `pip`. ::
+
+8. Install `pip`. ::
 
     pip install pip==20.3.3
 
-7. Install poetry, according to `<https://python-poetry.org/docs/#installation>`_.
+#. Install poetry, according to `<https://python-poetry.org/docs/#installation>`_.
 
 #. Add dependencies with poetry::
 
@@ -42,7 +44,10 @@ After doing that a python-version file will appears in the directory with projec
     poetry add pytest == 6.2.1
     poetry add pytest-django == 4.1.0
 
-#. #. Run server::
+Run
+++++
+
+#. Run server::
 
     python manage.py runserver
 
