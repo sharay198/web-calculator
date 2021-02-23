@@ -29,16 +29,24 @@ Set a python version 3.8.5 in your directory with project (web_calculator/)::
 
     pyenv local 3.8.5
 
-After doing that a python-version file will appears in the directory with project.
-#. Install `pip`. Ensure you are in `daily-trader-core` directory::
-
-    pip install pip==20.3.3
+After doing that a "python-version" file will appears in the directory with project.
 
 7. Install poetry, according to `<https://python-poetry.org/docs/#installation>`_.
+
+#. Create virtualenv with Poetry::
+
+    poetry shell
 
 #. Add dependencies with poetry::
 
     poetry add django == 3.1.4
     poetry add pytest == 6.2.1
     poetry add pytest-django == 4.1.0
+
+Run
++++
+
+#. Run server::
+
+    python manage.py runserver
 
