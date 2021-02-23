@@ -42,3 +42,7 @@ After doing that a python-version file will appears in the directory with projec
     poetry add pytest == 6.2.1
     poetry add pytest-django == 4.1.0
 
+#. #. Run server::
+
+    python manage.py runserver
+
