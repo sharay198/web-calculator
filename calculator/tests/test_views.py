@@ -9,7 +9,7 @@ from calculator.views import *
                           ('database', 'expressions'),
                           ('expression_details', 'expression'),
                           ('delete_expression', 'expression')))
-def test_create_path_to_template(template_name, key_of_context):
+def test_check_path_to_template(template_name, key_of_context):
     path_to_template = BASE_DIR + f'/calculator/templates/calculator/{template_name}.html'
     content_of_template = open(path_to_template, 'r')
     assert key_of_context in content_of_template.read()
