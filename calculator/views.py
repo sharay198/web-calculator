@@ -4,7 +4,6 @@ from calculator.models import Exp
 from calculator.forms import ExpForm
 
 
-
 def get_expression(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -15,7 +14,6 @@ def get_expression(request):
             expression = bound_form.cleaned_data['expression']
             result_of_expression = bound_form.cleaned_data['result_of_expression']
             d = {'expression': expression, 'result_of_expression': result_of_expression}
-            print(d)
             bound_form = ExpForm(d)
             bound_form.save()
             return render(request, 'calculator/index.html', context={'form': bound_form})
@@ -30,7 +28,7 @@ def get_expression(request):
 
 def details_of_expression(request, id):
     expression = Exp.expressions.get(id=id)
-    return render(request, 'calculator/expression details.html', context={'expression': expression})
+    return render(request, 'calculator/expression_details.html', context={'expression': expression})
 
 
 def list_of_expressions(request):
@@ -41,12 +39,8 @@ def list_of_expressions(request):
 def delete_expression(request, id):
     if request.method == 'GET':
         expression = Exp.expressions.get(id=id)
-        return render(request, 'calculator/delete expression.html', context={'expression': expression})
+        return render(request, 'calculator/delete_expression.html', context={'expression': expression})
     if request.method == 'POST':
         expression = Exp.expressions.get(id=id)
         expression.delete()
         return redirect(reverse('database'))
-
-
-
-

@@ -1,6 +1,19 @@
 from django.core.exceptions import ValidationError
+import os
 
-list_of_available_chars = '*/+-.0123456789)('
+# from settings import BASE_DIR
+#
+# list_of_available_chars = '*/+-.0123456789)('
+#
+# def get_templates_name():
+#     path_to_templates = BASE_DIR + f'/calculator/templates/calculator/'
+#     list_of_files = os.listdir(path_to_templates)
+#     list_of_files.pop(2)
+#     return list_of_files
+# print(get_templates_name())
+
+
+
 
 
 # remove to clean_result_of_exp of forms.py
