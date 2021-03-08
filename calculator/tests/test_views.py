@@ -15,15 +15,15 @@ def django_db_setup():
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3')}
 
 
-@pytest.mark.django_db
-def test_key_of_context_of_delete_page():
-    client = Client()
-    path = reverse('delete', kwargs={'id': 15})
-    print(path)
-    response = client.get(path)
-    assert 'expression' in response.context
-    # exp = Exp.expressions.get(id=5)
-    print(response.context)
+# @pytest.mark.django_db
+# def test_key_of_context_of_delete_page():
+#     client = Client()
+#     path = reverse('delete', kwargs={'id': 15})
+#     print(path)
+#     response = client.get(path)
+#     assert 'expression' in response.context
+#     # exp = Exp.expressions.get(id=5)
+#     print(response.context)
 
 
 def get_templates_name():
@@ -41,8 +41,8 @@ def template_name(request):
     return content_of_template
 
 
-def test_template_name(template_name):
-    print(template_name)
+# def test_template_name(template_name):
+#     print(template_name)
 
 
 @pytest.fixture(params=[reverse('index'),
@@ -53,8 +53,8 @@ def path(request):
     return request.param
 
 
-def test_path(path):
-    print(path)
+# def test_path(path):
+#     print(path)
 
 
 @pytest.fixture()
@@ -65,9 +65,9 @@ def key_of_context(path):
     return key_of_context
 
 
-@pytest.mark.django_db
-def test_key_of_context(key_of_context):
-    print(key_of_context)
+# @pytest.mark.django_db
+# def test_key_of_context(key_of_context):
+#     print(key_of_context)
 
 
 @pytest.mark.django_db
@@ -90,53 +90,3 @@ def test_equality_key_of_context_using_in_template_with_key_using_in_views(key_o
 #     content_of_template = open(path_to_template, 'r')
 #     assert key_of_context in content_of_template.read()
 
-
-class TestViews:
-    client = Client()
-    paths = {'index': reverse('index'),
-             'database': reverse('database'),
-             'delete': reverse('delete', kwargs={'id': 15}),
-             'details': reverse('details', kwargs={'id': 15})}
-
-    @pytest.mark.django_db
-    def test_key_of_context_of_database_page(self):
-        path = self.paths['database']
-        response = self.client.get(path)
-        print(response.context)
-        assert 'expressions' in response.context
-
-    def test_key_of_context_of_delete_page(self, django_db_setup):
-        path = reverse('delete', kwargs={'id': 5})
-        print(path)
-        response = self.client.get('/calculator/database/5/delete/')
-        exp = Exp.expressions.get(id=5)
-        print(exp)
-        # assert 'expression' in response.context
-
-    # @pytest.mark.django_db
-    # def test_key_of_context_of_details_page(self):
-    #     path = self.paths['details']
-    #     response = self.client.get(path)
-    #     assert self.key_of_context_of_detail_page in response.context
-
-    def test_template_using_of_index_page(self):
-        path = self.paths['index']
-        response = self.client.get(path)
-        for template in response.templates:
-            print(template.name)
-        assert 'calculator/index.html' in [template.name for template in response.templates]
-
-    @pytest.mark.django_db
-    def test_template_using_of_database_page(self):
-        path = self.paths['database']
-        response = self.client.get(path)
-        assert 'calculator/database.html' in [template.name for template in response.templates]
-
-    @pytest.mark.django_db
-    def test_template_using_of_details_page(self):
-        path = self.paths['details']
-        response = self.client.get(path)
-        # print(response.templates)
-        for template in response.templates:
-            print(template.name)
-        # assert 'calculator/expression_details.html' in [template.name for template in response.templates]
