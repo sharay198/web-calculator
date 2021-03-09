@@ -13,37 +13,12 @@ def django_db_setup():
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3')}
 
 
-def get_templates_name():
-    """Return list of templates, using in the application"""
-    path_to_templates = BASE_DIR + f'/calculator/templates/calculator/'
-    list_of_templates = os.listdir(path_to_templates)
-    list_of_templates.pop(2)  # remove base.html
-    return list_of_templates  # ['expression_details.html', 'delete_expression.html', 'database.html', 'index.html']
-
-
-@pytest.fixture(params=get_templates_name())
-def content_of_template(request):
-    """Return content of template as string"""
-    template = request.param
-    path_to_template = BASE_DIR + f'/calculator/templates/calculator/{template}'
-    content_of_template = open(path_to_template, 'r').read()
-    return content_of_template
-
-
-def test_template_name(content_of_template):
-    print(content_of_template)
-
-
-@pytest.fixture(params=[reverse('details', kwargs={'id': 100}),
-                        reverse('delete', kwargs={'id': 35}),
-                        reverse('database'),
-                        reverse('index')])
+@pytest.fixture(params=[reverse('details', kwargs={'id': 100}),  # /calculator/database/100/
+                        reverse('delete', kwargs={'id': 35}),  # /calculator/database/35/delete/
+                        reverse('database'),  # /calculator/database
+                        reverse('index')])  # /calculator/
 def path(request):
     return request.param
-
-
-def test_path(path):
-    print(path)
 
 
 @pytest.fixture()
@@ -58,13 +33,18 @@ def key_of_context(path):
             return key
 
 
-@pytest.mark.django_db
-def test_key_of_context(key_of_context):
-    print(key_of_context)
+@pytest.fixture()
+def template(path):
+    client = Client()
+    response = client.get(path)
+    template_using_in_views = response.templates
+    for template in template_using_in_views:
+        content_template_file = open(BASE_DIR + f'/calculator/templates/{template.name}', 'r').read()
+        return content_template_file
 
 
+
 @pytest.mark.django_db
-def test_equality_key_of_context_using_in_template_with_key_using_in_views(content_of_template, key_of_context):
+def test_equality_key_of_context_using_in_template_with_key_using_in_views(template, key_of_context):
     """Check if key of context in views.py equal key using in template"""
-    if key_of_context in content_of_template:
-        assert key_of_context in content_of_template
+    assert key_of_context in template
