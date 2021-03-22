@@ -10,6 +10,6 @@ setup(name='web_calculator',
                        '"-", "*", "/", "**"',
       long_description_content_type='text/restructuredtext',
       url='https://github.com/sergeysharay1987/web_calculator',
-      packages = find_packages(), install_requires=['pytest']
+      packages = find_packages(), install_requires=['pytest', 'django']
       )
 
