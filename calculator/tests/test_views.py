@@ -5,6 +5,7 @@ from web_calculator.settings import BASE_DIR, DATABASES
 from calculator.views import *
 import os
 
+_keys_of_context_using_in_views = ['expression', 'expression', 'expressions', 'form']
 
 @pytest.fixture(scope='session')
 def django_db_setup():
@@ -17,16 +18,16 @@ def django_db_setup():
                         reverse('delete', kwargs={'id': 35}),  # /calculator/database/35/delete/
                         reverse('database'),  # /calculator/database
                         reverse('index')])  # /calculator/
-def path(request):
-    return request.param
+def make_response(request):
+    path = request.param
+    client = Client()
+    response = client.get(path)
+    return response
 
 
 @pytest.fixture()
-def key_of_context(path):
-    client = Client()
-    response = client.get(path)
-    context_list = response.context
-    _keys_of_context_using_in_views = ['expression', 'expression', 'expressions', 'form']
+def key_of_context(make_response):
+    context_list = make_response.context
     keys = context_list.keys()
     for key in keys:
         if key in _keys_of_context_using_in_views:
@@ -34,14 +35,11 @@ def key_of_context(path):
 
 
 @pytest.fixture()
-def template(path):
-    client = Client()
-    response = client.get(path)
-    template_using_in_views = response.templates
-    for template in template_using_in_views:
+def template(make_response):
+    templates_using_in_views = make_response.templates
+    for template in templates_using_in_views:
         content_template_file = open(BASE_DIR + f'/calculator/templates/{template.name}', 'r').read()
         return content_template_file
-
 
 
 @pytest.mark.django_db
