@@ -1,11 +1,12 @@
 import pytest
 from django.conf import settings
-from django.test import Client
-from web_calculator.settings import BASE_DIR, DATABASES
+from django.test.client import Client
+from web_calculator.settings import BASE_DIR
 from calculator.views import *
 import os
 
 _keys_of_context_using_in_views = ['expression', 'expression', 'expressions', 'form']
+
 
 @pytest.fixture(scope='session')
 def django_db_setup():
@@ -34,8 +35,14 @@ def key_of_context(make_response):
             return key
 
 
+@pytest.mark.django_db
+def test_key_context(key_of_context):
+    print(key_of_context)
+
+
 @pytest.fixture()
 def template(make_response):
+    """Return content of template"""
     templates_using_in_views = make_response.templates
     for template in templates_using_in_views:
         content_template_file = open(BASE_DIR + f'/calculator/templates/{template.name}', 'r').read()
