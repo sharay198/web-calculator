@@ -35,11 +35,6 @@ def key_of_context(make_response):
             return key
 
 
-@pytest.mark.django_db
-def test_key_context(key_of_context):
-    print(key_of_context)
-
-
 @pytest.fixture()
 def template(make_response):
     """Return content of template"""
