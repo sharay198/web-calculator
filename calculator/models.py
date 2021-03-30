@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Exp(models.Model):
-    expression = models.CharField('expression', max_length=150, db_index=True)
-    result_of_expression = models.CharField('result of expression', max_length=150, db_index=True, blank=True)
+    expression = models.CharField('expression', max_length=150)
+    result_of_expression = models.CharField('result of expression', max_length=150, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     expressions = models.Manager()
 

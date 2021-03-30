@@ -48,5 +48,3 @@ def template(make_response):
 def test_equality_key_of_context_using_in_template_with_key_using_in_views(template, key_of_context):
     """Check if key of context in views.py equal key using in template"""
     assert key_of_context in template
-
-
