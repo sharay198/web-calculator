@@ -41,6 +41,6 @@ def delete_expression(request, id):
         expression = Exp.objects.get(id=id)
         return render(request, 'calculator/delete_expression.html', context={'expression': expression})
     if request.method == 'POST':
-        expression = Exp.expressions.get(id=id)
+        expression = Exp.objects.get(id=id)
         expression.delete()
         return redirect(reverse('database'))
