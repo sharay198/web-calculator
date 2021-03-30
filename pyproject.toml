@@ -6,7 +6,7 @@ authors = ["Sergey_Sharay <sergeysharay1987@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-django = "^3.1.4"
+django = "^3.1.6"
 pytest = "^6.2.1"
 pytest-django = "^4.1.0"
 
