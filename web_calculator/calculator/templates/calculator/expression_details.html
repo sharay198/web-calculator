@@ -1,0 +1,12 @@
+{% extends 'calculator/base_calculator.html' %}
+
+{% block content %}
+
+<h1>Expression details</h1>
+ <table cellpadding="10" cellspacing="0" border = 0>
+        <tr><td>{{expression.expression}}</td><td>{{expression.result_of_expression}}<td>{{expression.date}}</td></tr>
+ </table>
+
+
+
+{% endblock %}

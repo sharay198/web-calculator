@@ -1,0 +1,18 @@
+{% extends 'calculator/base_calculator.html' %}
+
+{% block content %}
+
+<h1>List of expressions, results and date publish</h1>
+
+{% for expression in expressions %}
+<p>
+    {{expression.expression}}
+    <a href="{% url 'details' id=expression.id %}">Read details</a>
+    <a href = "{% url 'delete' id=expression.id %}"> Delete</a>
+    <a href = "{% url 'index' %}"> Back to the calculator</a>
+</p>
+
+{% endfor %}
+
+{% endblock %}
+
