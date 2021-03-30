@@ -10,4 +10,4 @@ class Exp(models.Model):
 
 
     def __str__(self):
-        return '{} {} {}'.format(self.expression, self.result_of_expression, self.date)
+        return '{} {} {}'.format(self.expression, self.result_of_expression, self.created_at)
