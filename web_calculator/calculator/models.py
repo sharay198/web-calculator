@@ -10,4 +10,4 @@ class Expression(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return '{} {} {}'.format(self.expression, self.result, self.created_at)
+        return f'{self.expression} {self.result} {self.created_at}'
