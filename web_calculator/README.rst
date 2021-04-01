@@ -36,7 +36,9 @@ After doing that a python-version file will appears in the directory with projec
 
     pip install pip==20.3.3
 
-#. Install poetry, according to `<https://python-poetry.org/docs/#installation>`_.
+#. Install Poetry (known working version: 1.1.4)::
+
+    pip install poetry
 
 Run
 ++++
