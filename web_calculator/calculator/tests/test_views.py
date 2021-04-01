@@ -31,6 +31,7 @@ def key_of_context(make_response):
     context_list = make_response.context
     keys = context_list.keys()
     for key in keys:
+
         if key in _keys_of_context_using_in_views:
             return key
 

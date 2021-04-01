@@ -9,6 +9,7 @@ def get_expression(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         bound_form = ExpForm(request.POST)
+
         # check whether it's valid:
         if bound_form.is_valid():
             expression = bound_form.cleaned_data['expression']
@@ -21,6 +22,7 @@ def get_expression(request):
             d = {'expression': request.POST['expression'], 'result_of_expression': ''}
             bound_form = ExpForm(d)
             return render(request, 'calculator/index.html', context={'form': bound_form})
+
     if request.method == 'GET':
         form = ExpForm()
         return render(request, 'calculator/index.html', context={'form': form})
@@ -37,9 +39,11 @@ def list_of_expressions(request):
 
 
 def delete_expression(request, id):
+
     if request.method == 'GET':
         expression = Expression.objects.get(id=id)
         return render(request, 'calculator/delete_expression.html', context={'expression': expression})
+
     if request.method == 'POST':
         expression = Expression.objects.get(id=id)
         expression.delete()

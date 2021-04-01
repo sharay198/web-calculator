@@ -11,6 +11,7 @@ import pytest
                                    {'expression': 'print()'}, {'expression': 'print("world)'}])
 def test_form(param):
     f = ExpForm({'expression': param})
+
     if f.is_valid():
         assert f.clean() == f.cleaned_data
     else:
