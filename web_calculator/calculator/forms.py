@@ -1,6 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from calculator.models import Exp
+from calculator.models import Expression
 from .calculator import *
 
 
@@ -12,7 +12,7 @@ class ExpForm(forms.ModelForm):
                                            widget=forms.TextInput(attrs={'readonly': 'readonly'}))
 
     class Meta:
-        model = Exp
+        model = Expression
         fields = ['expression', 'result_of_expression']
 
     def clean(self):
