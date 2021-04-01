@@ -8,18 +8,18 @@ class ExpForm(forms.ModelForm):
     expression = forms.CharField(error_messages={'required': 'Please enter your expression'},
                                  widget=forms.TextInput(attrs={'placeholder': 'Enter expression'}),
                                  help_text='Enter expression')
-    result_of_expression = forms.CharField(required=False,
-                                           widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+    result = forms.CharField(required=False,
+                             widget=forms.TextInput(attrs={'readonly': 'readonly'}))
 
     class Meta:
         model = Expression
-        fields = ['expression', 'result_of_expression']
+        fields = ['expression', 'result']
 
     def clean(self):
         cleaned_data = super(ExpForm, self).clean()
         expression = self.cleaned_data.get('expression')
         try:
-            cleaned_data['result_of_expression'] = calculate_expression(expression)
+            cleaned_data['result'] = calculate_expression(expression)
         except ZeroDivisionError:
             raise ValidationError('You can not division on zero')
         except (NameError, SyntaxError, KeyError, IndexError, TypeError):

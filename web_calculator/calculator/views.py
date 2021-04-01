@@ -13,13 +13,13 @@ def get_expression(request):
         # check whether it's valid:
         if bound_form.is_valid():
             expression = bound_form.cleaned_data['expression']
-            result_of_expression = bound_form.cleaned_data['result_of_expression']
-            d = {'expression': expression, 'result_of_expression': result_of_expression}
+            result = bound_form.cleaned_data['result']
+            d = {'expression': expression, 'result': result}
             bound_form = ExpForm(d)
             bound_form.save()
             return render(request, 'calculator/index.html', context={'form': bound_form})
         elif bound_form.errors:
-            d = {'expression': request.POST['expression'], 'result_of_expression': ''}
+            d = {'expression': request.POST['expression'], 'result': ''}
             bound_form = ExpForm(d)
             return render(request, 'calculator/index.html', context={'form': bound_form})
 
