@@ -5,3 +5,4 @@ __pycache__
 *.pyc
 # Default ignored files
 /workspace.xml
+*.xml
