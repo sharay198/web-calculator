@@ -25,7 +25,7 @@ to get the latest version for development.
 
     pyenv install 3.9.2
 
-#. Set a python version 3.8.5 in your directory with project (web_calculator/)::
+#. Set a python version 3.9.2 in your directory with project (web_calculator/)::
 
     pyenv local 3.9.2
 
