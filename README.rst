@@ -30,8 +30,7 @@ to get the latest version for development.
     pyenv local 3.9.2
 
 
-
-   After doing that a python-version file will appears in the directory with project.
+    After doing that a python-version file will appears in the directory with project.
 
 8. Install `pip`. ::
 
