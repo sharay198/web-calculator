@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from ..calculator.models import Expression
-from ..calculator.forms import ExpForm
+from .models import Expression
+from .forms import ExpForm
 
 
 def get_expression(request):
