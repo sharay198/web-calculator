@@ -4,8 +4,8 @@ WORKDIR /app
 ADD . /app
 RUN pip install poetry
 RUN poetry install
-
-CMD python manage.py runserver 127.0.0.1:8000
+EXPOSE 8000
+CMD python manage.py runserver 8000
 
 
 
