@@ -1,6 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from calculator.models import Expression
+from .models import Expression
 from .calculator import *
 
 
