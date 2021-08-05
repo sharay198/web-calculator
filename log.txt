@@ -1,0 +1,767 @@
+commit b547168c921966433a0d66690ead5d404ec2826f
+Author: sergeysharay1987 <SergeySharay1987@gmail.com>
+Date:   Thu Jul 29 22:09:21 2021 +0300
+
+    Making changes in pyproject.toml
+
+commit b09703577178f27032b5cefa8f29058fb8a67161
+Author: Sergey Sharay <SergeySharay1987@gmail.com>
+Date:   Thu Jul 29 22:06:36 2021 +0300
+
+    Making changes in Dockerfile
+
+commit 33fa32d97693a58dc4597cec55cb0e5080b366ae
+Merge: 51bc3dd 60bbc75
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Wed Jul 21 19:37:34 2021 +0300
+
+    Making changes in Dockerfile
+
+commit 51bc3dde2448c029b8ebba29a836b5887b17374d
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Wed Jul 21 19:25:31 2021 +0300
+
+    Adding .python-version file and Dockerfile
+
+commit 60bbc75f33b03c53d1b3db2db97f4a5540d85be9
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Wed Jul 21 19:25:31 2021 +0300
+
+    Adding .python-version file
+
+commit d187e3f0e4a09a05c45bd8decb4180db9ae0936a
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sat Apr 17 22:27:07 2021 +0300
+
+    Changing expression.result_of_exp to expression.result and expression.date to expression.created_at
+
+commit d2e1dc556e3e1c8dc620b1aac9fb5f9ae215e25f
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sat Apr 17 22:25:20 2021 +0300
+
+    Changing imports in views and urls
+
+commit d1d83642715a25c607744ae61f249a29c6de579d
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sat Apr 17 12:11:17 2021 +0300
+
+     removing files
+
+commit 5e6fc1f47ea76534ba614519ceef552c4e67b447
+Merge: b884c5c 7a715c2
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sat Apr 17 11:42:40 2021 +0300
+
+    Changing gitignore.txt and removing files
+
+commit b884c5cb2643f6aa33b471a2c1969f3dc4267b39
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sat Apr 17 11:33:59 2021 +0300
+
+    Some changes
+
+commit d82613e27890ae3aad35873ce29c926de31ecb28
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sat Apr 17 11:17:42 2021 +0300
+
+    Moving files to upper directory
+
+commit 7a715c242e66fe46ea2a253be53c3649b772e1ac
+Author: sergeysharay1987 <47673048+sergeysharay1987@users.noreply.github.com>
+Date:   Sat Apr 17 11:13:56 2021 +0300
+
+    Delete .idea directory
+
+commit e6908abe767633156fa9a8b82f8b11b119c32d9f
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sat Apr 17 11:13:10 2021 +0300
+
+    Changing urls.py and views.py
+
+commit a095f57fa676ab18e541ec30ca4b0220998fbef0
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sat Apr 17 11:11:20 2021 +0300
+
+    Changing gitignore.txt
+
+commit d3055b6d49d4152a2c8f05deaa7b0bed7b0c533b
+Author: sergeysharay1987 <47673048+sergeysharay1987@users.noreply.github.com>
+Date:   Sat Apr 17 11:05:22 2021 +0300
+
+    Delete .idea directory
+
+commit a94ef6de4439675c8b14b0b03c33f941d4017980
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Apr 13 20:37:44 2021 +0300
+
+    Making changes
+
+commit 38e86c6a4d595d1b386914ddab5fdbbf3716f0d1
+Merge: 4f9f826 0e57491
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Apr 13 20:36:21 2021 +0300
+
+    Making changes
+
+commit 4f9f826ce91e4150f7f1d34b00b6162b86c242b0
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Apr 13 20:24:21 2021 +0300
+
+    Making changes
+
+commit f9b1f52185ff8dfbadc74ad57f09c923392e5e6e
+Author: sergeysharay1987 <47673048+sergeysharay1987@users.noreply.github.com>
+Date:   Sun Apr 11 21:16:30 2021 +0300
+
+    Making formatting netter #10
+
+commit 0e574912fc270428f15f98ee7768f1bc7a90a91f
+Author: sergeysharay1987 <47673048+sergeysharay1987@users.noreply.github.com>
+Date:   Sun Apr 11 21:16:30 2021 +0300
+
+    Make formatting better
+
+commit eb64b2b8aa5dd6c13664c9f7bf33c20f4f1e27b1
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Apr 11 20:57:41 2021 +0300
+
+    Deleting web_calculator/web_calculator/README.rst
+
+commit 298e0778c2b7f20b1af17bbc8c727bcfd33daf29
+Author: sergeysharay1987 <47673048+sergeysharay1987@users.noreply.github.com>
+Date:   Sun Apr 11 20:42:35 2021 +0300
+
+    Update README.rst
+
+commit 17da233aa348f0766f0f6b86e07dad667650d973
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 8 22:33:11 2021 +0300
+
+    Adding *.xml in gitignore
+
+commit 44220a7e3c506816db005124cadfa3e906cc5d82
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 8 22:21:50 2021 +0300
+
+    Adding /workspace.xml in .gitignore
+
+commit 719c869e2457b0dcd08a8f0a9d380f26302803f1
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Apr 6 22:23:27 2021 +0300
+
+    Adding README.rst
+
+commit ef03ce9282abdf9d2353a930c31fc71bd6b017c0
+Author: sergeysharay1987 <47673048+sergeysharay1987@users.noreply.github.com>
+Date:   Tue Apr 6 22:11:14 2021 +0300
+
+    Delete README.rst
+
+commit 1f5b2c1d268414d6ca42721e288d9c992ca3d1c3
+Author: sergeysharay1987 <47673048+sergeysharay1987@users.noreply.github.com>
+Date:   Tue Apr 6 22:05:42 2021 +0300
+
+    Create README.rst
+
+commit c8e98f4bffff69bd297688f380d2dd26a9111d55
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Apr 6 22:03:47 2021 +0300
+
+    Delete files and remake structire
+
+commit 52f32d8f9fdb7802aec52e2d4bd086c97c36a206
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Apr 6 21:55:53 2021 +0300
+
+    Delete web_calculator/README.rst
+
+commit a092866c193dc9b42a9f32573d5d990055ae3672
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Apr 6 21:55:19 2021 +0300
+
+    Delete web_calculator/README.rst
+
+commit a31051e3bc5716ec0969c6ead204c90cef6203c8
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Apr 6 21:27:37 2021 +0300
+
+    Write 'pip install poetry' in README.rst
+
+commit 97bcff6a8cd750b02d6991a21973392376083999
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Apr 6 21:19:01 2021 +0300
+
+    Write 'pip install poetry' in README.rst
+
+commit 8452598a6da1d30c0240e0f05ccb630f058c45b9
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 1 22:32:47 2021 +0300
+
+    Making changes in README.rst
+
+commit a8828ca4fb395814b47571229cef7826b2dd5ce5
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 1 21:27:38 2021 +0300
+
+    Making changes in README.rst
+
+commit a4a56d247d09bcbe67b25969cba8515398094b55
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 1 21:17:54 2021 +0300
+
+    Replacing format method with f-string
+
+commit a5f17c78763f1c696fdec676690ea24798866292
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 1 21:11:53 2021 +0300
+
+    Removing validators.py from project, because we do not use code from it
+
+commit d40e69f865f5ae881f11eb20161ea304f86147d3
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 1 20:55:55 2021 +0300
+
+    Renaming 'result_of_expression' to 'result' in other files
+
+commit 81e00f3f6211fbf6ac4d2603a65b2bd6d7492168
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 1 20:53:43 2021 +0300
+
+    Adding empty string in calculator.py, models.py, forms.py, validators.py views.py and test_files
+
+commit 3b35167f034f25b3f7990d1917a5b78f625c0d08
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 1 20:41:04 2021 +0300
+
+    Renaming class 'Exp' in models.py in 'Expression' and in other files, using Expression
+
+commit f578098ef4e170e179ef9a477a0f0867779a2d95
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Apr 1 20:07:25 2021 +0300
+
+    Removing comments from validators.py and make changes in gitinore file
+
+commit 01df2655dda7dbf5a9e8c5d1171b4441564bae31
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Mar 30 20:37:14 2021 +0300
+
+    Change structure of project
+
+commit 2890e687f6213af2a9f807e4ce4cb06191c6473a
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Mar 30 20:20:26 2021 +0300
+
+    Renaming field date into created_at models.py
+
+commit e2ae4dcbfba8f1d1d77d8fbb7c90df236b2735e7
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Mar 30 19:46:35 2021 +0300
+
+    Renaming argument of Exp.__str__ self.date into self.created_at in  models.py
+
+commit 4fd924234c9c93c5f3ab346dadcb519036d7a4cd
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Mar 30 19:44:10 2021 +0300
+
+    Renaming field date into created_at models.py
+
+commit e28f99c57e6ec1f0b7fcc1da0bf799d93bd3e5be
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Mar 30 19:43:26 2021 +0300
+
+    Removing comments from models.py
+
+commit ec4278a04ae3e6d81a634b8f6844154483785b5d
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Mar 30 19:42:13 2021 +0300
+
+    Changing attribute expressions to objects views.py
+
+commit cafeca927cb8610a61e868ef5d85e951c303d0c5
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Mar 30 19:40:42 2021 +0300
+
+    Changing attribute expressions to objects views.py. Removing manager from Exp model
+
+commit 1892bda00e055307ef473a19f04550bfe5226b6a
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Mar 30 19:17:06 2021 +0300
+
+    Remove 'db_index=True' in test_views.py
+
+commit d82063fdc598275af20464938dd79ad569848991
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:55:14 2021 +0300
+
+    Remove tests in test_views.py
+
+commit ff72a6cc936388a5ebf28af3f219f224b6b74162
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:54:35 2021 +0300
+
+    Remove tests in test_views.py
+
+commit 2c8e466dab0858cd36e73ff04e7baed3ff873e68
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:36:14 2021 +0300
+
+    Remove tests in test_views.py
+
+commit 32d15798237209d74465fbe78c1600cf6b9981a3
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:35:52 2021 +0300
+
+    Some changes in test_views.py
+
+commit 8679434b954ba06428d568dec8da0a1b1b783b5a
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:35:34 2021 +0300
+
+    Some changes in test_views.py
+
+commit 88d20ca92899bddf33588f83161aae36fa1d119f
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:35:10 2021 +0300
+
+    Some changes in test_views.py
+
+commit 513736c4e09823d6207aeeb8fe2ec9a4e8675cb0
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:34:46 2021 +0300
+
+    Some changes in test_views.py
+
+commit 77058f99a7e0e1c9f0f026fee4b5cdb7aedf2d1c
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:34:11 2021 +0300
+
+    Some changes in test_views.py
+
+commit bb635fd49bd18ccd4fd4a2c11e9c5c8c1134b078
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:32:56 2021 +0300
+
+    Some changes in test_views.py
+
+commit 49e6af390fc80b8e1687364b30f534e7bc6062a1
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:32:13 2021 +0300
+
+    Some changes in test_views.py
+
+commit e070df0b744ad19c677894aa09681912196d9bb9
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 29 21:31:32 2021 +0300
+
+    Some changes in test_views.py
+
+commit c4358ef3ed72d03e8bac7b365e92aa448817d651
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 22 21:42:03 2021 +0300
+
+    Adding dependence in setup.py
+
+commit ed49c1aa8acfe0fb125a0da631f0c12db6605d8e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 22 19:41:01 2021 +0300
+
+    Optimizing imports
+
+commit b9aad599cef462d1038b75301c8587beab172ddd
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 22 19:26:35 2021 +0300
+
+    Removing comments and remaiking tests in test_views.py
+
+commit 348cb6548b9b85e88ea8ff35209c7780af50c87e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Mar 9 21:46:29 2021 +0300
+
+    Removing sometest_functions and comments test in test_views.py
+
+commit ab9076097176fdc2ead27476b05989666046bb6b
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 8 22:58:58 2021 +0300
+
+    Make changes in test_views
+
+commit 27c18779d6db57fe152826040fb5f274fbf73624
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 8 19:59:59 2021 +0300
+
+    Removing class 'TestViews' test in test_views.py
+
+commit 214e777c52bb55ef0ffcb600e29bc8c9184db4e7
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Mar 8 19:38:56 2021 +0300
+
+    Remakikng test in test_views.py
+
+commit adff769ed6de67ad477dbfcd79c3e4ed2f1cdc4d
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Mar 4 23:03:44 2021 +0300
+
+    Rename templares in views.py
+
+commit 06fd9abd31d91127dc7be8844adf14203d61e556
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Feb 28 19:04:11 2021 +0300
+
+    Rename 'test_create_path_to_template' into 'test_key_of_context_using_in_template'
+
+commit 2210fd2b3bb97fb5dce2b6c3c1095ad443b8a08a
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 21:55:32 2021 +0300
+
+    Make changes in test_views.py
+
+commit f3e3f158e0ce031cbf098f9f350f9e1e79ac88b3
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 19:51:28 2021 +0300
+
+    Make changes in test_views after renaming templates
+
+commit a2e77a57b4ec875fbc3ae88103e1a430b0fd5c2e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 19:50:04 2021 +0300
+
+    Remname templates
+
+commit a27057a9f04bd265af890b58e3e9c7bd30308d37
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 19:46:03 2021 +0300
+
+    Remove setup.py from folder 'calculator' to 'web_calculator'
+
+commit 4b2546d1ac5cdd9c473342de4972e4baab3eed91
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 19:36:48 2021 +0300
+
+    Adding information in setup.py
+
+commit 80accd407f1e9df099a919a819e78d9f53421e05
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 18:32:29 2021 +0300
+
+    Adding setup.py
+
+commit 7adb72ddc230fde6fdaab825d757d0d280eccc0c
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 17:55:42 2021 +0300
+
+    Making changes in README.rst
+
+commit 778feccb538a0afc0efdcb32e15738d25fb9c42d
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 17:51:20 2021 +0300
+
+    Return back file validators.py to solve the problem with run server
+
+commit 5a88b926ea8c552f87e20f522592924989054a58
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 17:43:46 2021 +0300
+
+    Making changes in README.rst
+
+commit 0d70635b0d9be70e309fe2f0702882ea02931b33
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 17:18:11 2021 +0300
+
+    recovery files setup and test_views
+
+commit 42f137a7676b73c8059716bd7ad14fe8f4e75a5d
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 16:16:39 2021 +0300
+
+    Adding setup.py
+
+commit 5edd6628628a50685c89cb71be7d79b4d2464625
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Feb 23 16:10:40 2021 +0300
+
+    Rewriting README.rst
+
+commit a7c726b916c6751ff686e68d22c9a379748f67e2
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Feb 7 21:20:40 2021 +0300
+
+    Rewriting README.rst
+
+commit 757750320ba8cd36cf60a2d534081b74339e3e3e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Feb 7 17:39:02 2021 +0300
+
+    Removing validators.py
+
+commit a549e6c371bcea5fcd7132a6ce6012358de5862e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Feb 7 17:35:23 2021 +0300
+
+    Remaking clean method in forms.py, changing string of ValdationError
+
+commit 55a730a8ae82ac8af9d2b31aea7edfc8fef9e77e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Feb 7 17:13:22 2021 +0300
+
+    Remaking clean method in forms.py and check_empty_only_brackets_is_in_expression in calculator.py
+
+commit da6f22c14ce8e72ea3b40c2a87c710ae6e3c26c3
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Feb 7 16:59:19 2021 +0300
+
+    Removing class TestUrls and it's methods in test_urls
+
+commit 75eb4004545282fcbf1286aa686c1da69bdd8f0e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Feb 7 16:55:57 2021 +0300
+
+    Remaking tests in test_urls, using pytest.mark.paramitrize and the same thing in test_forms
+
+commit 881fa5ad52396e64ba0f2daad04e46f478f288f3
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Jan 24 20:44:00 2021 +0300
+
+    Remaking function 'check_if_only_brackets' in calculator.py
+
+commit f23b8a48df99afafcae2adce9f589532ad9822e3
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Jan 17 20:50:35 2021 +0300
+
+    Optimize imports
+
+commit 3179ebd46ee61a3e684765000948f6c343df943e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Jan 17 20:49:45 2021 +0300
+
+    Uncomment failed tests
+
+commit e88c7e309550c5b01c0a920720278d5529e2d4d0
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Jan 17 20:42:59 2021 +0300
+
+    Separated tests
+
+commit 0336f5d7a04eb33adc71615ba632e70f486c3fbf
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Jan 17 20:36:21 2021 +0300
+
+    Fix tests in test_views.py and also adding tests in it
+
+commit 9780821f3f433f97d6c6bc1070596cb236c42223
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Jan 10 23:55:31 2021 +0300
+
+    Adding file validators.py to solve a problem with starting server
+
+commit 10c49585cf5279f7a4b51f92c69311173b8ac560
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Jan 10 23:51:40 2021 +0300
+
+    Adding function test_ExpForm() in test_views.py
+
+commit 75af51b005bf8e60da4ea85fc8bdaec921f2ec8f
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Fri Jan 8 22:21:28 2021 +0300
+
+    Removing function make_dict_with_data_for_form_with_error and check_remainder_of_value  in views.py
+
+commit 992248c3b442d0edca98d9fc25f5952801ebb097
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Fri Jan 8 22:00:01 2021 +0300
+
+    Removing comments in views.py
+
+commit 4953b53e906eeec631b91c39eb52193ec6c15ec8
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Fri Jan 8 21:57:17 2021 +0300
+
+    Removing file validators.py, making changes in clean method of forms.py and in calculator.py
+
+commit 8dbd01580afdfcf617b13232a3a856fede7890f3
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Fri Jan 8 21:31:28 2021 +0300
+
+    Adding functions in calculator.py and removing comments in forms.py and models.py
+
+commit a0e20da2d03558308a9d35f9169fb645868a55f5
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Wed Jan 6 01:50:04 2021 +0300
+
+    Fix typo in index.html,  form.non_filed_errors change form.non_fieds
+
+commit 2368d739e709f8891c5d3bb1e4640ea2f35ec35e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Wed Jan 6 00:30:06 2021 +0300
+
+    Making changes in def check_expression in validators.py
+
+commit 5252a4d35ea42063ef240f689a9d13ea2e096e26
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Wed Jan 6 00:27:23 2021 +0300
+
+    Removing 'check_string_s_action_exponentiation from validators.py' and some comments from views.py.
+
+commit bd0b0538ffdba1a1024a72092fa84e0136beb9c0
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Wed Jan 6 00:18:02 2021 +0300
+
+    Adding .python-version file
+
+commit 9ac83991df160608bdf8fdee9af2e725511646ae
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Jan 5 23:37:05 2021 +0300
+
+    Delete pyc files
+
+commit 32e1adcaa8a938f59c2fbd11406fc3bdd541eed0
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Jan 5 23:28:48 2021 +0300
+
+    Some changes
+
+commit 47ede56c3ef75b05ca650387062784cac7dda144
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Dec 24 22:01:36 2020 +0300
+
+    Adding class TestModels and method test_check_expression
+
+commit 58ea0423451551b141e3ebb8aef6028b6859fd7b
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Dec 24 19:33:29 2020 +0300
+
+    Removing comments with code and string containing print in views
+
+commit 0dd518da1f3168f12b8800b62525990eae4f75d5
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Dec 24 19:22:49 2020 +0300
+
+    Adding calculate_expression, make_dict_with_data_for_valid_form and make_dict_with_data_for_form_with_error
+
+commit 24f2fb1487d9493bf314726ba3db1816c112e706
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Thu Dec 24 00:55:43 2020 +0300
+
+     Making new functions in views.py, new test and adding the anchor 'Back to calculator'
+
+commit bc6cac307d17f63467d63e9d0c137839bcb2ec88
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Dec 20 23:58:16 2020 +0300
+
+    Removing all checks from clean_result_of_expression of 'forms.py' to validators.py
+
+commit 1aeada653612dc57beb8cd325847557746fb7de2
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Dec 20 19:18:37 2020 +0300
+
+    All works, but therea re two errors at the same time in 'expression' field and 'result of expression' field. Remaming of 'delete_expression' in 'delete expression'.
+
+commit 4881b1de75624bfcaa85095bdaaf0fe1c01bcef0
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Fri Dec 18 22:57:53 2020 +0300
+
+    Adding def 'check_string_s_action'
+
+commit 551762bbea4291c3d11584e7d9319cc9d34a3721
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Nov 16 22:55:28 2020 +0300
+
+    Adding def delete_expression in views.py. Rename the template 'delete_expression' into 'delete expression'
+
+commit bd5176f71a88968a765ccdf0f119fceca885bca5
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Nov 16 20:13:50 2020 +0300
+
+    Renaming of atributes in forms.py and models,py. Making migrations. Renaming keys of contexts in views.py and in templates.
+
+commit 0aaa49eb37aae0775f5da1ddd6485b0f76b4fd6e
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Nov 16 20:13:19 2020 +0300
+
+    Renaming of atributes in forms.py and models,py. Making migrations. Renaming keys of contexts in views.py and in templates.
+
+commit 265b99942d4e5505d05c1e455a767a603e63a687
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Nov 15 19:01:12 2020 +0300
+
+    Rename functions in views.py. Adding new tests.Removing requirements.txt
+
+commit 81a72c3186e45e7eb27f19233ae450688b5fa3af
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Nov 15 14:17:49 2020 +0300
+
+    Adding def exp_detail and template to render it
+
+commit 2b4170a4efa4fefc5d613ce2d6f5cbd805b3c274
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Nov 10 22:17:49 2020 +0300
+
+    Install pytest-django and test have become passed
+
+commit 6507a673e6bdfc2ca4aa8f6a46900ee59cc7b0a6
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Nov 10 20:49:11 2020 +0300
+
+    Removing 'venv directory and changing web_calculator\settings.py'
+
+commit 30d90977e89c118ae7310438c07e57da43dbc2ab
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sun Nov 1 21:27:53 2020 +0300
+
+    Rename the project to web_calculator
+
+commit 0057103bf5c3002de1b523e28fc951ed5994fbfe
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Oct 13 16:37:37 2020 +0300
+
+    New commit
+
+commit 838a8fb99c1b4adb4e3613e63f5940c8d77c200d
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Oct 13 16:14:47 2020 +0300
+
+    Removing and adding some files
+
+commit 7f2867ccf10ecced2695724aa83bdc2640203537
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Aug 25 22:10:49 2020 +0300
+
+    Delete db.sqlite3 from git repository
+
+commit 9d301f5aa3f5f6469e592adac0707367a99445df
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Aug 25 22:09:16 2020 +0300
+
+    Delete .idea
+
+commit ded9d2457ef09af0a9fd26c923fd0ed7c1c83d59
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Aug 25 22:07:23 2020 +0300
+
+    Delete __pycache__
+
+commit 734aa40a3da020e215748bb0ac102c1d8a2758c6
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Tue Aug 25 15:29:16 2020 +0300
+
+    Rename key 'bound_form' into 'form' in render(). Rename 'bound_form'
+    into 'form' in {% for field in bound_form %}.
+    Writing some code in test_views.py.
+    Addition __pychache__ in gitignore
+
+commit 87ebd2a8bfeb316f9745d5f9d4038a2b4650832d
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Sat Aug 15 17:29:41 2020 +0300
+
+    Create new folder 'tests' and new files test_forms, test_models, test_views
+
+commit 12c17c3c7d900bd40a3705558b69f5fc4e419f28
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Mon Aug 10 20:43:25 2020 +0300
+
+    Removal comments from 'views.py' and addition 'db.sqlite3' to '.gitignore'.
+
+commit 4469d4407771967079f3f4369a4b2fd803b6dbb6
+Author: Sergey_Sharay <sergeysharay1987@gmail.com>
+Date:   Fri May 8 22:56:48 2020 +0300
+
+    Initial commit
