@@ -18,10 +18,7 @@ RUN pip install poetry && poetry config virtualenvs.create false && poetry insta
 RUN cd /app/web_calculator/
 WORKDIR /app/web_calculator/
 
-
-
 EXPOSE 8000
 #ENTRYPOINT ["python3", "manage.py"]
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
-
 
