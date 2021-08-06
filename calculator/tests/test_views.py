@@ -8,11 +8,11 @@ import os
 _keys_of_context_using_in_views = ['expression', 'expression', 'expressions', 'form']
 
 
-@pytest.fixture(scope='session')
-def django_db_setup():
-    settings.DATABASES['default'] = {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')}
+# @pytest.fixture(scope='session')
+# def django_db_setup():
+#     settings.DATABASES['default'] = {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3')}
 
 
 @pytest.fixture(params=[reverse('details', kwargs={'id': 100}),  # /calculator/database/100/
