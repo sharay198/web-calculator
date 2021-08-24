@@ -25,7 +25,7 @@ SECRET_KEY = 'q9)t%t**z)flw4$)leej@!a%qyb#kafm+vl)1unh9j*-6y!gqx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'web_calculator.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_for_web_calculator',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': '127.0.0.1',
