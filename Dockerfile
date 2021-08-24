@@ -3,4 +3,4 @@ WORKDIR /app
 ADD . /app
 RUN pip install poetry && poetry && poetry install
 EXPOSE 8000
-CMD ["poetry", "run", "python", "-m", "manage", "runserver", "0.0.0.0:8000"]
+CMD ["poetry", "run", "python", "-m", "manage", "runserver", "127.0.0.1:8000"]
