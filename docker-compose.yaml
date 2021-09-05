@@ -4,9 +4,9 @@ services:
   db:
     image: postgres
     volumes:
-      - /var/lib/postgresql/12/main:/var/lib/postgresql/data
+      #- /var/lib/postgresql/12/main:/var/lib/postgresql/data
       #- volume_for_postgresql_db:/var/lib/postgresql/data
-      #- ./data/db:/var/lib/postgresql/data
+      - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
@@ -17,7 +17,7 @@ services:
     build: .
     command: poetry run python -m manage runserver 0.0.0.0:8000
     volumes:
-      - .:/app/_data
+      - .:/app
     ports:
       - "8000:8000"
     depends_on:
