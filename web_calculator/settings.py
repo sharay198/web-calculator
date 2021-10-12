@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'web_calculator.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
-        #'HOST': 'db',
+        #'HOST': '127.0.0.1',
+        'HOST': 'db',
         'PORT': 5432,
     }
 }
