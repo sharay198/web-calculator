@@ -5,8 +5,6 @@ services:
   db:
     image: postgres:13.2-alpine
     volumes:
-      #- /var/lib/postgresql/12/main:/var/lib/postgresql/data
-      #- volume_for_postgresql_db:/var/lib/postgresql/data
       - pg_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=postgres
@@ -14,22 +12,32 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432:5432"
-#    networks:
-#      some_network:
+
+
+
   web:
     build: .
-    #command: poetry run python -m manage runserver 0.0.0.0:8000
+#    command: poetry run python -m manage runserver 0.0.0.0:8000
+    #command: ./entrypoint.sh
+    command: sh -c "
+      poetry run python -m manage migrate
+      && poetry run python -m manage runserver 127.0.0.1:8000
+      "
+
     volumes:
       - web_data:/app
-    ports:
-      - "127.0.0.1:8000:8000"
-#    networks:
-#      some_network:
+#    ports:
+#      - "8000:8000"
+#     - "127.0.0.1:5432:5432"
     depends_on:
       - db
+    network_mode: host
+
+
 volumes:
   web_data:
   pg_data:
 
-#networks:
-#   some_network:
+networks:
+   web_calc:
+     driver: host
