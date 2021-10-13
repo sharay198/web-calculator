@@ -12,32 +12,21 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432:5432"
-
-
+    restart: always
 
   web:
     build: .
-#    command: poetry run python -m manage runserver 0.0.0.0:8000
-    #command: ./entrypoint.sh
     command: sh -c "
       poetry run python -m manage migrate
-      && poetry run python -m manage runserver 127.0.0.1:8000
+      && poetry run python -m manage runserver 0.0.0.0:8000
       "
-
     volumes:
-      - web_data:/app
-#    ports:
-#      - "8000:8000"
-#     - "127.0.0.1:5432:5432"
+      - ./:/app
+    ports:
+      - "8000:8000"
     depends_on:
       - db
-    network_mode: host
-
 
 volumes:
-  web_data:
   pg_data:
 
-networks:
-   web_calc:
-     driver: host
