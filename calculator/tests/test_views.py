@@ -3,6 +3,7 @@ from django.core.management import call_command
 from django.test.client import Client
 from web_calculator.settings import BASE_DIR
 from calculator.views import *
+from pytest_django.fixtures import django_db_setup
 # from pytest_django.asserts
 
 # define variable containing names of context's keys in views.py
@@ -10,9 +11,9 @@ _keys_of_context_using_in_views = ['form', 'expression', 'expressions', 'express
 
 
 @pytest.fixture(scope='session')
-def django_db_setup(django_db_setup, django_db_blocker):
-    with django_db_blocker.unblock():
-        call_command('loaddata', BASE_DIR +'/db_for_tests.json')
+def django_db_setup(django_db_blocker):
+        django_db_blocker.unblock()
+        call_command('loaddata', BASE_DIR + '/db_for_tests.json')
 
 
 @pytest.fixture(params=[reverse('details', kwargs={'id': 100}),  # /calculator/database/100/
@@ -59,11 +60,8 @@ def key_of_context(make_response):
 
 @pytest.mark.django_db
 def test_key_of_context(make_response):
-    content = make_response.content
     context_list = make_response.context
-    #print(context_list)
     keys = context_list.keys()
-    print(keys)
     for key in keys:
 
         if key in _keys_of_context_using_in_views:
