@@ -18,7 +18,7 @@ services:
     build: .
     command: sh -c "
       poetry run python -m manage migrate
-      && poetry run python -m manage runserver 0.0.0.0:8000
+      && poetry run gunicorn -b 0.0.0.0 web_calculator.wsgi --reload
       "
     volumes:
       - ./:/app
